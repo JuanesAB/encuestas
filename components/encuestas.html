@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>Encuestas</title>
+	<meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
+	<meta name="author" content="Juanes Álvarez">
+	<meta name="description" content="Sistema de encuestas creado para ABRACOL.">
+	<link rel="icon" href="../assets/img/icon.ico" type="image/x-icon"/>
+	<!-- Fonts and icons -->
+	<script src="../assets/js/plugin/webfont/webfont.min.js"></script>
+	<script>
+		WebFont.load({
+			google: {"families":["Lato:300,400,700,900"]},
+			custom: {"families":["Flaticon", "Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands", "simple-line-icons"], urls: ['../assets/css/fonts.min.css']},
+			active: function() {
+				sessionStorage.fonts = true;
+			}
+		});
+	</script>
+
+	<!-- CSS Files -->
+	<link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../assets/css/atlantis.min.css">
+	<link rel="stylesheet" href="../assets/css/demo.css">
+	<link rel="stylesheet" href="../assets/css/comun.css">
+
+</head>
+<body>
+	<div class="wrapper">
+		<div class="main-header">
+			<!-- Logo Header -->
+			<div class="logo-header" data-background-color="dark">
+				
+				<a href="index.html" class="logo">
+					<img src="https://abracol.com/imagenes/logo-blanco.png" alt="navbar brand" class="navbar-brand" style="width:70%">
+				</a>
+				<button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse" data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon">
+						<i class="icon-menu"></i>
+					</span>
+				</button>
+				<button class="topbar-toggler more"><i class="icon-options-vertical"></i></button>
+				<div class="nav-toggle">
+					<button class="btn btn-toggle toggle-sidebar">
+						<i class="icon-menu"></i>
+					</button>
+				</div>
+			</div>
+			<!-- End Logo Header -->
+
+			<!-- Navbar Header -->
+			<nav class="navbar navbar-header navbar-expand-lg" data-background-color="dark">
+				
+				<div class="container-fluid">
+					<div class="collapse" id="search-nav">
+						<form class="navbar-left navbar-form nav-search mr-md-3">
+							<div class="input-group">
+								<div class="input-group-prepend">
+									<button type="submit" class="btn btn-search pr-1">
+										<i class="fa fa-search search-icon"></i>
+									</button>
+								</div>
+								<input type="text" placeholder="Search ..." class="form-control">
+							</div>
+						</form>
+					</div>
+					<ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
+						<li class="nav-item toggle-nav-search hidden-caret">
+							<a class="nav-link" data-toggle="collapse" href="#search-nav" role="button" aria-expanded="false" aria-controls="search-nav">
+								<i class="fa fa-search"></i>
+							</a>
+						</li>
+						<li class="nav-item dropdown hidden-caret">
+							<a class="nav-link dropdown-toggle" href="#" id="notifDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<i class="fa fa-bell"></i>
+								<span class="notification">4</span>
+							</a>
+							<ul class="dropdown-menu notif-box animated fadeIn" aria-labelledby="notifDropdown">
+								<li>
+									<div class="dropdown-title">You have 4 new notification</div>
+								</li>
+								<li>
+									<div class="notif-scroll scrollbar-outer">
+										<div class="notif-center">
+											<a href="#">
+												<div class="notif-icon notif-primary"> <i class="fa fa-user-plus"></i> </div>
+												<div class="notif-content">
+													<span class="block">
+														New user registered
+													</span>
+													<span class="time">5 minutes ago</span> 
+												</div>
+											</a>
+											<a href="#">
+												<div class="notif-icon notif-success"> <i class="fa fa-comment"></i> </div>
+												<div class="notif-content">
+													<span class="block">
+														Rahmad commented on Admin
+													</span>
+													<span class="time">12 minutes ago</span> 
+												</div>
+											</a>
+											<a href="#">
+												<div class="notif-img"> 
+													<img src="../assets/img/profile2.jpg" alt="Img Profile">
+												</div>
+												<div class="notif-content">
+													<span class="block">
+														Reza send messages to you
+													</span>
+													<span class="time">12 minutes ago</span> 
+												</div>
+											</a>
+											<a href="#">
+												<div class="notif-icon notif-danger"> <i class="fa fa-heart"></i> </div>
+												<div class="notif-content">
+													<span class="block">
+														Farrah liked Admin
+													</span>
+													<span class="time">17 minutes ago</span> 
+												</div>
+											</a>
+										</div>
+									</div>
+								</li>
+								<li>
+									<a class="see-all" href="javascript:void(0);">See all notifications<i class="fa fa-angle-right"></i> </a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item dropdown hidden-caret">
+							<a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false">
+								<div class="avatar-sm">
+									<img src="../assets/img/profile.jpg" alt="..." class="avatar-img rounded-circle">
+								</div>
+							</a>
+							<ul class="dropdown-menu dropdown-user animated fadeIn">
+								<div class="dropdown-user-scroll scrollbar-outer">
+									<li>
+										<div class="user-box">
+											<div class="avatar-lg"><img src="../assets/img/profile.jpg" alt="image profile" class="avatar-img rounded"></div>
+											<div class="u-text">
+												<h4>Hizrian</h4>
+												<p class="text-muted">hello@example.com</p><a href="profile.html" class="btn btn-xs btn-secondary btn-sm">View Profile</a>
+											</div>
+										</div>
+									</li>
+									<li>
+										<div class="dropdown-divider"></div>
+										<a class="dropdown-item" href="#">My Profile</a>
+										<a class="dropdown-item" href="#">My Balance</a>
+										<a class="dropdown-item" href="#">Inbox</a>
+										<div class="dropdown-divider"></div>
+										<a class="dropdown-item" href="#">Account Setting</a>
+										<div class="dropdown-divider"></div>
+										<a class="dropdown-item" href="#">Logout</a>
+									</li>
+								</div>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<!-- End Navbar -->
+		</div>
+
+		<!-- Sidebar -->
+		<div class="sidebar sidebar-style-2">			
+			<div class="sidebar-wrapper scrollbar scrollbar-inner">
+				<div class="sidebar-content">
+					<div class="user">
+						<div class="avatar-sm float-left mr-2">
+							<img src="https://yt3.ggpht.com/a/AATXAJwB8iIATE1ZV6SCOpKsF7D57jhH-YNQEKrGAQ=s900-c-k-c0xffffffff-no-rj-mo" alt="..." class="avatar-img rounded-circle">
+						</div>
+					</div>
+					<ul class="nav nav-primary">
+						<li class="nav-item ">
+							<a href="../index.html">
+								<i class="fas fa-home"></i>
+								<p>Dashboard</p>
+							</a>
+						</li>
+						<li class="nav-item active">
+							<a data-toggle="collapse" href="#base">
+								<i class="fas fa-question"></i>
+								<p>Encuestas</p>
+								<span class="caret"></span>
+							</a>
+							<div class="collapse" id="base">
+								<ul class="nav nav-collapse">
+									<li class="active">
+										<a href="components/encuestas.html">
+											<span class="sub-item">Crear nueva</span>
+										</a>
+									</li>
+									<li>
+										<a href="components/buttons.html">
+											<span class="sub-item">Editar encuesta</span>
+										</a>
+									</li>
+									<li>
+										<a href="components/buttons.html">
+											<span class="sub-item">Encuestas creadas</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- End Sidebar -->
+
+		<div class="main-panel">
+			<div class="content">
+				<div class="container mt-4">
+					<div class="card">
+						<div class="card-header">
+							<ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist">
+								<li class="nav-item">
+									<a class="nav-link" :class="{ active: tab === 'general' }" id="general-tab" data-toggle="tab" href="#general" role="tab" aria-controls="general" aria-selected="true">General</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" :class="{ active: tab === 'questions', disabled: continuarGeneral }" id="questions-tab" data-toggle="tab" href="#questions" role="tab" aria-controls="questions" aria-selected="false">Preguntas y respuestas</a>
+								</li>
+							</ul>
+						</div>
+						<div class="card-body">
+							<div class="tab-content" id="myTabContent">
+								<div class="tab-pane fade" :class="{ show: tab === 'general', active: tab === 'general' }" id="general" role="tabpanel" aria-labelledby="general-tab">
+									<h5 class="card-title">Nueva encuesta</h5>
+									<div class="form-group">
+										<label for="nombreEncuesta">Nombre de la encuesta<span style="color:red">*</span></label>
+										<input type="text" class="form-control" id="nombreEncuesta" v-model="nombreEncuesta">
+									</div>
+									<div class="form-group">
+										<label for="descripcionEncuesta">Descripción de la encuesta</label>
+										<textarea class="form-control" id="descripcionEncuesta" rows="7" v-model="descripcionEncuesta"></textarea>
+									</div>
+									<div class="form-group">
+										<div class="form-group">
+											<label for="modoVisualizacion">¿Se visualizará por paginación?</label>
+											<div class="form-check form-check-inline">
+												<input class="form-check-input" type="radio" id="siModoVisualizacion" value="1" v-model="modoVisualizacion">
+												<label class="form-check-label" for="siModoVisualizacion">Sí</label>
+											</div>
+											<div class="form-check form-check-inline">
+												<input class="form-check-input" type="radio" id="noModoVisualizacion" value="0" v-model="modoVisualizacion" checked>
+												<label class="form-check-label" for="noModoVisualizacion">No</label>
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<button class="btn btn-primary btn-sm" @click="continuarSiNombreLleno">Continuar</button>
+									</div>
+								</div>
+								<div class="tab-pane fade" :class="{ show: tab === 'questions', active: tab === 'questions' }" id="questions" role="tabpanel" aria-labelledby="questions-tab">
+									<h5 class="card-title">Agregar preguntas</h5>
+									<div class="preguntas-container">
+										<h4 class="negrilla">Encuesta: {{ nombreEncuesta }}</h4>
+										<div v-for="(pregunta, index) in preguntas" :key="index" class="pregunta" style="background-color: rgb(237, 237, 237); margin: 10px; padding: 10px;">
+											<label class="negrilla" :for="'pregunta-' + index">{{ pregunta.respuesta === 'seccion' ? 'Nueva sección ' : 'Pregunta ' + (index + 1) }}</label>
+											<input type="text" class="form-control mb-2" :id="'pregunta-' + index" v-model="pregunta.texto" required="required">
+											<label :for="'respuesta-' + index">Tipo de respuesta</label>
+											<select class="form-control" :id="'respuesta-' + index" v-model="pregunta.respuesta">
+												<option value="seccion" v-if="modoVisualizacion === '1'">Sección</option>
+-												<option value="textbox">Caja de texto</option>
+												<option value="numBox">Numérico</option>
+												<option value="uniqueAnswer">Única respuesta</option>
+												<option value="multipleAnswer">Múltiple respuesta</option>
+												<option value="date">Fecha</option>
+												<option value="department">Departamento</option>
+												<option value="city">Ciudad</option>
+												<option value="address">Dirección</option>
+												<option value="tableWithSelection">Tabla con selección</option>
+												<option value="range">Rango</option>
+												<option value="select">Selección</option>
+											</select>
+											<div v-if="pregunta.respuesta === 'textbox' || pregunta.respuesta === 'numBox'">
+												<br>
+												<p>Configuración del campo</label>
+												<div class="form-group">
+													<label for="requerido">¿Es requerido?</label>
+													<input type="checkbox" id="requerido" v-model="pregunta.requerido">
+												</div>
+												<div class="form-group">
+													<label for="caracteres">Máximo de caracteres</label>
+													<input type="number" class="form-control" id="caracteres" v-model="pregunta.caracteres" maxlength="5">
+												</div>
+											</div>
+					
+											<div v-if="pregunta.respuesta === 'uniqueAnswer' || pregunta.respuesta === 'multipleAnswer'">
+												<br>
+												<p>Configuración del campo</label>
+												<div class="form-group">
+													<label for="requerido">¿Es requerido?</label>
+													<input type="checkbox" id="requerido" v-model="pregunta.requerido">
+												</div>
+												<div>
+													<label>Respuestas:</label>
+													<button class="btn btn-primary btn-sm" @click="agregarRespuesta(pregunta)">Agregar respuesta</button>
+													<br><br>
+													<div v-for="(respuesta, respuestaIndex) in pregunta.respuestas" :key="respuestaIndex" class="input-group mb-2">
+														<input type="text" class="form-control" v-model="pregunta.respuestas[respuestaIndex]">
+														<div class="input-group-append">
+															<button class="btn btn-danger btn-sm" @click="eliminarRespuesta(pregunta, respuestaIndex)">
+																<i class="fas fa-trash"></i> <!-- Ícono de basura de Font Awesome -->
+															</button>
+														</div>
+													</div>
+													<div class="form-group">
+														<label for="agregarOtro">¿Añadir opción "Otro"?</label>
+														<input type="checkbox" id="agregarOtro" v-model="pregunta.agregarOtro">
+													</div>
+												</div>
+												<div v-if="pregunta.respuesta === 'uniqueAnswer'">
+													<div class="row">
+														<div class="col-md-5">
+															<div class="form-group">
+																<label for="requerido">MOSTRAR</label>
+																<select class="form-control" id="mostrarCuando" v-model="pregunta.mostrarCuando">
+																	<option v-for="(preguntaExistente, index) in preguntas" :key="index" :value="preguntaExistente.texto">
+																		{{ preguntaExistente.texto }}
+																	</option>
+																</select>
+															</div>
+														</div>
+														<div class="col-md-2">
+															<div class="form-group">
+																<label for="requerido">CUÁNDO</label>
+																<select class="form-control" id="opcionMostrarCuando" v-model="pregunta.opcionMostrarCuando">
+																	<option value=""></option>
+																	<option value="=">=</option>
+																	<option value=">">></option>
+																	<option value=">=">>=</option>
+																	<option value="<"><</option>
+																	<option value="<="><=</option>
+																	<option value="!=">!=</option>
+																</select>
+															</div>
+														</div>
+														<div class="col-md-5">
+															<div class="form-group">
+																<label for="requerido">A:</label>
+																<input type="text" class="form-control" id="comparacionTexto" v-model="pregunta.comparacionTexto">
+															</div>
+														</div>
+													</div>
+												</div>
+												<br>
+											</div>
+											<div v-if="pregunta.respuesta === 'date' || pregunta.respuesta === 'department' || pregunta.respuesta === 'city' || pregunta.respuesta === 'address'">
+												<br>
+												<p>Configuración del campo</label>
+												<div class="form-group">
+													<label for="requerido">¿Es requerido?</label>
+													<input type="checkbox" id="requerido" v-model="pregunta.requerido">
+												</div>
+											</div>
+											<div v-if="pregunta.respuesta === 'tableWithSelection'">
+												<br>
+												<p>Configuración del campo de selección de tabla</label>
+												<div class="form-group">
+													<label for="requerido">¿Es requerido?</label>
+													<input type="checkbox" id="requerido" v-model="pregunta.requerido">
+												</div>
+												<div>
+													<label>Opciones de la tabla:</label>
+													<button class="btn btn-primary btn-sm" @click="agregarOpcionTabla(pregunta)">Agregar opción</button>
+													<br><br>
+													<div v-for="(opcion, opcionIndex) in pregunta.opcionesTabla" :key="opcionIndex" class="input-group mb-2">
+														<input type="text" class="form-control" v-model="pregunta.opcionesTabla[opcionIndex].descripcion" placeholder="Descripción de la columna">
+														<textarea class="form-control" id="SelectUno" v-model="pregunta.opcionesTabla[opcionIndex].SelectUno" placeholder="Cada opción debe ser separada por un guión medio (-)."></textarea>
+														<textarea class="form-control" id="SelectDos" v-model="pregunta.opcionesTabla[opcionIndex].SelectDos" placeholder="Cada opción debe ser separada por un guión medio (-)."></textarea>
+														<div class="input-group-append">
+															<button class="btn btn-danger btn-sm" @click="eliminarOpcionTabla(pregunta, opcionIndex)">
+																<i class="fas fa-trash"></i>
+															</button>
+														</div>
+													</div>
+												</div>
+												<br>
+											</div>
+											<div v-if="pregunta.respuesta === 'range'">
+												<br>
+												<p>Configuración del campo</label>
+												<div class="form-group">
+													<label for="requerido">¿Es requerido?</label>
+													<input type="checkbox" id="requerido" v-model="pregunta.requerido">
+												</div>
+												<div class="form-group">
+													<label for="caracteres">Número mínimo para el rango</label>
+													<input type="number" class="form-control" id="minLenght" v-model="pregunta.minLenght" maxlength="2">
+												</div>
+												<div class="form-group">
+													<label for="caracteres">Número máximo para el rango</label>
+													<input type="number" class="form-control" id="maxLenght" v-model="pregunta.maxLenght" maxlength="2">
+												</div>
+											</div>
+											<div v-if="pregunta.respuesta === 'select'">
+												<br>
+												<p>Configuración del campo</label>
+												<div class="form-group">
+													<label for="requerido">¿Es requerido?</label>
+													<input type="checkbox" id="requerido" v-model="pregunta.requerido">
+												</div>
+												<div class="form-group">
+													<label for="caracteres">Opciones para la selección.</label>
+													<textarea class="form-control" id="seleccion" v-model="pregunta.seleccion"></textarea>
+												</div>
+											</div>
+											<br>
+											<button class="btn btn-danger btn-sm" @click="eliminarPregunta(index)">{{ pregunta.respuesta === 'seccion' ? 'Eliminar sección': 'Eliminar pregunta' }}</button>
+											<hr>
+										</div>
+									</div>
+									<button class="btn btn-secondary btn-sm mt-3" @click="agregarPregunta">Agregar pregunta</button>
+									<button class="btn btn-success btn-sm mt-3" @click="guardarEncuesta">Guardar encuesta</button>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			<!-- <footer class="footer">
+				<div class="container-fluid">
+					<nav class="pull-left">
+						<ul class="nav">
+							<li class="nav-item">
+								<a class="nav-link" href="https://www.themekita.com">
+									ThemeKita
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									Help
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="#">
+									Licenses
+								</a>
+							</li>
+						</ul>
+					</nav>
+					<div class="copyright ml-auto">
+						2018, made with <i class="fa fa-heart heart text-danger"></i> by <a href="https://www.themekita.com">ThemeKita</a>
+					</div>				
+				</div>
+			</footer> -->
+		</div>
+		
+		<!-- End Custom template -->
+	</div>
+	<!--   Core JS Files   -->
+	<script src="../assets/js/core/jquery.3.2.1.min.js"></script>
+	<script src="../assets/js/core/popper.min.js"></script>
+	<script src="../assets/js/core/bootstrap.min.js"></script>
+
+	<!-- jQuery UI -->
+	<script src="../assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+	<script src="../assets/js/plugin/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
+
+	<!-- jQuery Scrollbar -->
+	<script src="../assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+
+	<!-- Chart JS -->
+	<script src="../assets/js/plugin/chart.js/chart.min.js"></script>
+
+	<!-- jQuery Sparkline -->
+	<script src="../assets/js/plugin/jquery.sparkline/jquery.sparkline.min.js"></script>
+
+	<!-- Chart Circle -->
+	<script src="../assets/js/plugin/chart-circle/circles.min.js"></script>
+
+	<!-- Datatables -->
+	<script src="../assets/js/plugin/datatables/datatables.min.js"></script>
+
+	<!-- Bootstrap Notify -->
+	<script src="../assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
+
+	<!-- AXIOS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.8/axios.min.js"></script>
+	<!-- jQuery Vector Maps -->
+	<script src="../assets/js/plugin/jqvmap/jquery.vmap.min.js"></script>
+	<script src="../assets/js/plugin/jqvmap/maps/jquery.vmap.world.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+	<script src="../assets/js/encuestas.js"></script>
+	<!-- Sweet Alert -->
+	<script src="../assets/js/plugin/sweetalert/sweetalert.min.js"></script>
+
+	<!-- Atlantis JS -->
+	<script src="../assets/js/atlantis.min.js"></script>
+
+	<!-- Atlantis DEMO methods, don't include it in your project! -->
+	<script src="../assets/js/setting-demo.js"></script>
+</body>
+</html>
