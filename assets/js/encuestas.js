@@ -34,6 +34,7 @@ new Vue({
                 seleccion: '',
                 //CONFIGURACIÓN CAMPOS ÚNICA RESPUESTA PARA MOSTRAR CUANDO
                 mostrarCuando: '',
+                comparacionPreguntas: '',
                 opcionMostrarCuando: '',
                 comparacionTexto: '',
             });
