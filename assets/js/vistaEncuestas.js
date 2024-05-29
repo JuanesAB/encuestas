@@ -23,7 +23,7 @@ new Vue({
         },
         async toggleDetalle(index) {
             try {
-                const response = await axios.post('http://localhost:3002/ENCUESTAS/personasRespondidas', this.infoEncuestas[index]);
+                const response = await axios.post('http://localhost:3002/ENCUESTAS/preguntasEncuesta', this.infoEncuestas[index]);
                 this.preguntasEncuesta = response.data.data;
                 console.log(this.preguntasEncuesta);
             } catch (error) {
@@ -44,32 +44,18 @@ new Vue({
                 }
             }
         },
-        async obtenerResultado(index) {
+        async mostrarRespuesta(idEncuesta, idPregunta) {
             try {
-                const response = await axios.post('http://localhost:3002/ENCUESTAS/respuestasPersonas', {id: this.infoEncuestas[index].id, numPerson: this.preguntasEncuesta[index].numPerson}) 
-                this.infoRespuestas = response.data.data;
-            } catch (error) {
-                console.error('Error al consultar las respuestas de la encuesta:', error);
-            }
-            console.log(index)
-
-            this.infoRespuestas[index].mostrarDetalle = !this.infoRespuestas[index].mostrarDetalle;
-        },
-        removerDetalleRespuesta(index) {
-            // Asegurar que el índice esté dentro de los límites del array
-            if (index >= 0 && index < this.infoRespuestas.length) {
-                // Cambiar el valor de mostrarDetalle en el índice dado
-                this.$set(this.infoRespuestas[index], 'mostrarDetalle', false);
-                
-                // Remover el elemento del DOM manualmente
-                const overlay = document.querySelector('.detalle-overlay2');
-                if (overlay) {
-                    overlay.style.display = 'none';
+                const response = await axios.post('http://localhost:3002/ENCUESTAS/respuestasPersonas', {
+                    idEncuesta: idEncuesta,
+                    idPregunta: idPregunta
+                });
+                if (response.data) {
+                    this.infoRespuestas = response.data.data;
                 }
+            } catch (error) {
+                console.error('Error al mostrar la respuesta:', error);
             }
         }
-        
-        
-        
     }
 });
